@@ -1,0 +1,65 @@
+.float-button {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 30px;
+}
+
+.float-button i {
+    color: #E9EDF8;
+    width: 56px;
+    height: 56px;
+    background-color: #081439;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.float-button__options {
+    list-style: none;
+    padding: 0;
+}
+
+.float-button__options i {
+    display: none;
+    margin: auto;
+    margin-bottom: 8px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    background-color: #E9EDF8;
+    color: #081439;
+    transition: 400ms color, 400ms border, 400ms background;
+    border: 2px solid #081439;
+    animation: grow 400ms ease-out;
+}
+
+.float-button__options i:hover {
+    color: #E9EDF8;
+    border: 2px solid #E9EDF8;
+    background-color: #081439;
+}
+
+.float-button:hover > .float-button__options i {
+    display: flex;
+}
+
+@keyframes grow {
+    0% {
+      display: none;
+      opacity: 0;
+    }
+    1% {
+      display: block;
+      opacity: 0;
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
